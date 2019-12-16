@@ -1,0 +1,168 @@
+$font1: "Rubik Mono One", sans-serif;
+$font2: 'Montserrat';
+$resolution: 1920;
+$resolution2: 320;
+$blue: #24186a;
+$yellow: #fdb315;
+$red: #f04132;
+
+a{
+	text-decoration: none;
+}
+*:focus{
+	outline: none;
+}
+html{
+	width: 100%;
+}
+
+body{
+	color: #ffffff;
+	font-family: $font1;
+	margin: 0;
+	font-size: 1vw;
+	background: #24186a;
+	width: 100%;
+}
+
+.container{
+	width: vw(1880);
+	margin: 0 auto;
+	position: relative;
+}
+
+.social-block{
+	.soc-link{
+		border: none;
+		background: $red;
+		width: vw(50);
+		height: vw(50);
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		svg{
+			width: vw(20);
+			height: vw(20);
+			object-fit: contain;
+			*{
+				fill: white;
+			}
+		}
+		&:hover{
+			background: #cb382e;
+		}
+		+.soc-link{
+			margin-top: vw(10);
+		}
+	}
+}
+
+.title{
+	span{
+		color: white;
+		display: inline-block;
+		&.yellow{
+			background-color: $yellow;
+		}
+		&.blue{
+			background-color: $blue;
+		}
+		&.red{
+			background-color: $red;
+		}
+	}
+}
+
+.text_style{
+	color: #ffffff;
+	font-family: $font2;
+	font-size: vw(24);
+	font-weight: 500;
+	line-height: vw(27);
+	p{
+		+p{
+			margin-top: vw(25);
+		}
+	}
+}
+
+.section_one{
+	height: vw(1080);
+	background: url("../images/bg-top.jpg") left center no-repeat;
+	background-size: cover;
+	position: relative;
+	&::before{
+		content: "";
+		clip-path: polygon(28% 0, 100% 0, 100% 100%, 0% 100%);
+		background: $red;
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: vw(916);
+		pointer-events: none;
+	}
+	.container{
+		height: 100%;
+	}
+	.logo{
+		display: block;
+		position: absolute;
+		top: vw(37);
+		left: vw(25);
+		width: vw(337);
+		img{
+			width: 100%;
+			display: block;
+		}
+	}
+	.social-block{
+		position: absolute;
+		left: vw(25);
+		bottom: vw(38);
+	}
+
+	.maxim{
+		display: block;
+		width: vw(232);
+		position: absolute;
+		right: 0;
+		top: vw(23);
+		img{
+			width: 100%;
+			display: block;
+		}
+	}
+	.daa{
+		display: block;
+		width: vw(296);
+		position: absolute;
+		left: vw(1120);
+		top: vw(55);
+		img{
+			width: 100%;
+			display: block;
+		}
+	}
+
+	.right{
+		padding-top: vw(333);
+		.title{
+			text-align: right;
+			font-size: vw(105);
+			font-weight: 400;
+			line-height: 0.8;
+			span{
+				padding: vw(25)  vw(25)  vw(22);
+			}
+		}
+		.text{
+			width: vw(760);
+			margin-top: vw(30);
+			text-align: right;
+			margin-left: auto;
+		}
+	}
+}
