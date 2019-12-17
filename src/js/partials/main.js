@@ -67,3 +67,12 @@ $(document).ready(function() {
 });
 
 
+
+function vote(elem) {
+    event.preventDefault();
+    var name = $(elem).val();
+    $(elem).closest('.img').addClass('liked');
+    $(elem).closest('.girls').find('.likes').show();
+    $(elem).closest('.girls').find('.like').hide();
+
+}
