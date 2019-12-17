@@ -325,6 +325,11 @@ body{
 							box-shadow: vw(-10) 0 0 $blue;
 						}
 					}
+					.age{
+						margin-top: vw(10);
+						margin-left: vw(10);
+						color: $blue;
+					}
 				}
 
 				&.right-girl{
@@ -339,6 +344,9 @@ body{
 								background: $red;
 								box-shadow: vw(-10) 0 0 $red;
 							}
+						}
+						.age{
+							color: $red;
 						}
 					}
 				}
