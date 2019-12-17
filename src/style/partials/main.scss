@@ -171,6 +171,29 @@ body{
 			margin-left: auto;
 		}
 	}
+
+	.arrow-down{
+		width: vw(87);
+		height: vw(50);
+		display: block;
+		background: url("../images/arr-b.png") center center no-repeat;
+		background-size: contain;
+		position: absolute;
+		bottom: vw(50);
+		left: 50%;
+		margin-left: vw(-43);
+		animation-name: arrow;
+		animation-duration: 0.5s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-fill-mode: both;
+		animation-play-state: running;
+	}
+}
+
+@keyframes arrow {
+	0% {transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1); opacity: 1; animation-timing-function: ease-in-out}
+	100% {transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,20,0,1); opacity: 1; }
 }
 
 .section_two{
