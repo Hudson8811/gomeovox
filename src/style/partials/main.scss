@@ -94,7 +94,7 @@ body{
 
 
 .section_one{
-	height: vw(1080);
+	height: 100vh;
 	background: url("../images/bg-top.jpg") left center no-repeat;
 	background-size: cover;
 	position: relative;
@@ -154,7 +154,7 @@ body{
 	}
 
 	.right{
-		padding-top: vw(333);
+		padding-top: 25vmin;
 		.title{
 			text-align: right;
 			font-size: vw(105);
