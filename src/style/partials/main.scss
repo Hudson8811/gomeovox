@@ -94,7 +94,8 @@ body{
 
 
 .section_one{
-	height: 100vh;
+	min-height: 100vh;
+	height: max-content;
 	background: url("../images/bg-top.jpg") left center no-repeat;
 	background-size: cover;
 	position: relative;
@@ -111,7 +112,8 @@ body{
 		pointer-events: none;
 	}
 	.container{
-		height: 100%;
+		min-height: 100vh;
+		height: max-content;
 	}
 	.logo{
 		display: block;
