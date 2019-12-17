@@ -87,6 +87,23 @@ body{
 	}
 }
 
+.blur {
+	filter: blur(50px);
+	transition: 1s linear;
+}
+
+.blur-ie {
+	display: none;
+}
+
+html[data-agent*="Trident"] .blur-wrapper .blur {
+	display: none;
+}
+
+html[data-agent*="Trident"] .blur-wrapper .blur-ie {
+	display: block;
+}
+
 .section_one{
 	height: vw(1080);
 	background: url("../images/bg-top.jpg") left center no-repeat;
@@ -168,10 +185,60 @@ body{
 }
 
 .section_two{
+	height: vw(1080);
+	position: relative;
+	background: $yellow;
+	&::before{
+		content: "";
+		clip-path: polygon(28% 0, 100% 0, 100% 100%, 0% 100%);
+		background: $blue;
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: vw(1067);
+		pointer-events: none;
+	}
+	.container{
+		position: relative;
+	}
+	.middle{
+		position: absolute;
+		width: vw(400);
+		left: 50%;
+		top: vw(115);
+		margin-left: vw(-200);
+		pointer-events: none;
+		.title{
+			color: #ffffff;
+			font-size: vw(105);
+			font-weight: 400;
+			text-align: center;
+			span{
+				box-sizing: border-box;
+				width: 100%;
+			}
+		}
+		.text{
+			color: #ffffff;
+			font-family: $font2;
+			font-size: vw(26);
+			font-weight: 500;
+			text-align: center;
+			margin-top: vw(240);
+		}
+	}
+
+	.swiper-container{
+		padding-top: vw(115);
+	}
 	.slider{
 		.girls{
 			display: flex;
 			justify-content: space-between;
+			width: vw(1604);
+			margin: 0 auto;
 			.girl-block{
 				width: vw(583);
 				.img{
@@ -180,7 +247,10 @@ body{
 					height: vw(795);
 					align-items: center;
 					justify-content: center;
-					image{
+					position: relative;
+					overflow: hidden;
+					background: black;
+					.image{
 						width: 100%;
 						height: 100%;
 						display: block;
@@ -190,8 +260,109 @@ body{
 						left: 0;
 						top: 0;
 					}
+					.likes{
+						position: relative;
+						z-index: 10;
+						color: $red;
+						font-size: vw(105);
+						line-height: 0.8;
+					}
+					.like{
+						position: absolute;
+						z-index: 2;
+						width: vw(90);
+						height: vw(90);
+						border-radius: 100%;
+						background: $blue;
+						bottom: vw(25);
+						left: 50%;
+						margin-left: vw(-45);
+						cursor: pointer;
+						border: none;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						svg{
+							width: 80%;
+							margin-top: vw(5);
+							path{
+								fill: $red;
+							}
+						}
+						&:hover{
+							transform: scale(1.1);
+						}
+					}
+				}
+				.flex-row{
+					display: flex;
+					justify-content: space-between;
+					align-items: flex-start;
+					margin-top: vw(23);
+					audio{
+						display: none;
+					}
+					.play{
+						display: block;
+						border: none;
+						background: url("../images/play.png") center center no-repeat;
+						background-size: contain;
+						width: vw(93);
+						height: vw(93);
+						cursor: pointer;
+						&:hover{
+							transform: scale(1.1);
+						}
+					}
+					.name{
+						color: $red;
+						font-size: vw(36);
+						max-width: 75%;
+						padding: vw(5) vw(10);
+						span{
+							background: $blue;
+							white-space:pre-wrap;
+							padding: vw(5) vw(10);
+							padding-left:0;
+							box-shadow: vw(-10) 0 0 $blue;
+						}
+					}
+				}
+
+				&.right-girl{
+					.flex-row{
+						.play{
+							background: url("../images/play_2.png") center center no-repeat;
+							background-size: contain;
+						}
+						.name{
+							color: $blue;
+							span{
+								background: $red;
+								box-shadow: vw(-10) 0 0 $red;
+							}
+						}
+					}
 				}
 			}
+		}
+		.swiper-button-prev,
+		.swiper-button-next{
+			width: vw(50);
+			height: vw(87);
+			display: block;
+			background: url("../images/arr-r.png") center center no-repeat;
+			background-size: contain;
+			&::after{
+				display: none;
+			}
+		}
+		.swiper-button-next{
+			right: vw(20);
+		}
+		.swiper-button-prev{
+			transform: scaleX(-1);
+			left: vw(20);
 		}
 	}
 }
