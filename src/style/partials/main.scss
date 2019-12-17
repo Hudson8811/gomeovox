@@ -311,6 +311,9 @@ body{
 						&:hover{
 							transform: scale(1.1);
 						}
+						&.pause{
+							background-image: url("../images/pause.png");
+						}
 					}
 					.name{
 						color: $red;
@@ -337,6 +340,9 @@ body{
 						.play{
 							background: url("../images/play_2.png") center center no-repeat;
 							background-size: contain;
+							&.pause{
+								background-image: url("../images/pause_2.png");
+							}
 						}
 						.name{
 							color: $blue;

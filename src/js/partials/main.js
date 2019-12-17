@@ -85,14 +85,19 @@ $(document).ready(function() {
                     audio.play();
                     playedAudio = audio;
                     startBlur();
+                    $('.girl-block .play').removeClass('pause');
+                    $(this).addClass('pause');
                 } else if (playedAudio === audio){
                     playedAudio.pause();
                     playedAudio.currentTime = 0;
                     playedAudio = '';
+                    $('.girl-block .play').removeClass('pause');
                 } else if (playedAudio === ''){
                     audio.play();
                     playedAudio = audio;
                     startBlur();
+                    $('.girl-block .play').removeClass('pause');
+                    $(this).addClass('pause');
                 }
 
                 function startBlur(){
