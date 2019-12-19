@@ -497,6 +497,7 @@ body{
 	position: relative;
 	padding-top: vw(50);
 	background: $red;
+	padding-bottom: vw(40);
 
 	&::before {
 		content: "";
@@ -593,6 +594,9 @@ body{
 
 		.cloud{
 			position: absolute;
+			background-position: center center;
+			background-size: contain;
+			background-repeat: no-repeat;
 			&-text{
 				text-align: center;
 				display: flex;
@@ -600,8 +604,302 @@ body{
 				justify-content: center;
 				font-size: vw(24);
 				font-weight: 400;
-				line-height: vw(27);
+			}
+			&-1{
+				&-1{
+					width: vw(285);
+					height: vw(249);
+					left: vw(121);
+					top: vw(690);
+					background-image: url("../images/t11.png");
+					z-index: 1;
+				}
+				&-2{
+					width: vw(287);
+					height: vw(378);
+					left: vw(8);
+					top: vw(443);
+					background-image: url("../images/t12.png");
+					color: $blue;
+					span{
+						margin-bottom: vw(60);
+						margin-right: vw(10);
+					}
+				}
+			}
+			&-2{
+				&-1{
+					width: vw(377);
+					height: vw(392);
+					left: vw(316);
+					top: vw(217);
+					background-image: url("../images/t21.png");
+				}
+				&-2{
+					width: vw(382);
+					height: vw(251);
+					left: vw(535);
+					top: vw(397);
+					background-image: url("../images/t22.png");
+					color: $blue;
+					span{
+						margin-left: vw(55);
+						margin-top: vw(30);
+					}
+				}
+			}
+			&-3{
+				&-1{
+					width: vw(372);
+					height: vw(320);
+					left: vw(708);
+					top: vw(44);
+					background-image: url("../images/t31.png");
+				}
+				&-2{
+					width: vw(308);
+					height: vw(269);
+					left: vw(1009);
+					top: vw(211);
+					background-image: url("../images/t32.png");
+					color: white;
+					span{
+						margin-top: vw(26);
+						margin-right: vw(20);
+					}
+				}
+			}
+			&-4{
+				&-1{
+					width: vw(377);
+					height: vw(248);
+					left: vw(1226);
+					top: vw(538);
+					background-image: url("../images/t41.png");
+					z-index: 1;
+				}
+				&-2{
+					width: vw(275);
+					height: vw(399);
+					left: vw(1497);
+					top: vw(351);
+					background-image: url("../images/t42.png");
+					color: $red;
+					span{
+						margin-bottom: vw(5);
+						margin-left: vw(14);
+					}
+				}
 			}
 		}
+	}
+
+	.text-bottom{
+		display: flex;
+		margin-top: vw(-25);
+		margin-left: vw(115);
+		p{
+			color: $blue;
+			font-family: $font2;
+			font-size: vw(24);
+			font-weight: 500;
+			line-height: vw(27);
+			+p{
+				margin-top: 1em;
+			}
+		}
+		.left{
+			width: vw(780);
+		}
+		.right{
+			width: vw(650);
+			margin-left: vw(60);
+		}
+	}
+
+	.spec-block{
+		margin-top: vw(55);
+		.text{
+			color: $blue;
+			font-size: vw(36);
+			font-weight: 400;
+			padding: vw(8) vw(16) vw(8) vw(16);
+			box-sizing: border-box;
+			margin-left: vw(80);
+			span{
+				padding: vw(8) vw(16) vw(8) vw(0);
+				background: $yellow;
+				box-shadow: vw(-16) 0 0 $yellow;
+				white-space: pre-wrap;
+			}
+		}
+		.icons{
+			margin-top: vw(44);
+			margin-left: vw(80);
+			position: relative;
+			height: vw(535);
+			.cloud {
+				position: absolute;
+				background-position: center center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				&-text {
+					text-align: center;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-size: vw(24);
+					font-weight: 400;
+				}
+
+				&-5 {
+					&-1 {
+						width: vw(376);
+						height: vw(304);
+						left: vw(0);
+						top: vw(7);
+						background-image: url("../images/t51.png");
+						z-index: 1;
+					}
+
+					&-2 {
+						width: vw(426);
+						height: vw(280);
+						left: vw(98);
+						top: vw(253);
+						background-image: url("../images/t52.png");
+						color: $blue;
+						font-size: vw(19);
+						span {
+							margin-top: vw(15);
+							margin-left: vw(80);
+						}
+					}
+				}
+				&-6 {
+					&-1 {
+						width: vw(263);
+						height: vw(278);
+						left: vw(545);
+						top: vw(253);
+						background-image: url("../images/t61.png");
+						z-index: 1;
+					}
+
+					&-2 {
+						width: vw(316);
+						height: vw(214);
+						left: vw(423);
+						top: vw(5);
+						background-image: url("../images/t62.png");
+						color: $red;
+						span {
+							margin-right: vw(22);
+							margin-bottom: vw(8);
+						}
+					}
+				}
+				&-7{
+					&-1 {
+						width: vw(269);
+						height: vw(231);
+						left: vw(816);
+						top: vw(14);
+						background-image: url("../images/t71.png");
+						z-index: 1;
+					}
+
+					&-2 {
+						width: vw(279);
+						height: vw(226);
+						left: vw(945);
+						top: vw(225);
+						background-image: url("../images/t72.png");
+						color: $blue;
+						span {
+							margin-left: vw(24);
+							margin-top: vw(17);
+						}
+					}
+				}
+				&-8 {
+					&-1 {
+						width: vw(308);
+						height: vw(269);
+						left: vw(1463);
+						top: vw(227);
+						background-image: url("../images/t81.png");
+						z-index: 1;
+					}
+
+					&-2 {
+						width: vw(372);
+						height: vw(320);
+						left: vw(1217);
+						top: vw(0);
+						background-image: url("../images/t82.png");
+						color: $red;
+						span {
+							margin-bottom: vw(32);
+						}
+					}
+				}
+			}
+		}
+
+		.flex-block{
+			margin-top: vw(24);
+			display: flex;
+			margin-left: vw(130);
+			p{
+				color: $blue;
+				font-family: $font2;
+				font-size: vw(24);
+				font-weight: 500;
+				line-height: vw(27);
+				+p{
+					margin-top: 1em;
+				}
+			}
+			.left{
+				width: vw(575);
+				margin-top: vw(58);
+			}
+			.right{
+				width: vw(520);
+				margin-top: vw(70);
+			}
+			.center{
+				width: vw(320);
+				margin-left: vw(34);
+				margin-right: vw(67);
+				img{
+					width: 100%;
+					display: block;
+				}
+			}
+		}
+		.last-text{
+			color: $yellow;
+			font-size: vw(36);
+			font-weight: 400;
+			padding: vw(8) vw(16) vw(8) vw(16);
+			box-sizing: border-box;
+			margin-left: vw(362);
+			margin-top: vw(20);
+			span{
+				padding: vw(8) vw(16) vw(8) vw(0);
+				background: $blue;
+				box-shadow: vw(-16) 0 0 $blue;
+				white-space: pre-wrap;
+			}
+		}
+	}
+}
+
+.section_five{
+	padding: vw(15) vw(17);
+	img{
+		width: 100%;
 	}
 }
