@@ -1,13 +1,13 @@
 {"girls":
   [
-    {"name": "Виктория Цуранова", "age": "26 лет", "image": "images/girls/1.jpg", "sound": "sound.mp3"},
-    {"name": "Елизавета Бондаренко", "age": "21 год", "image": "images/girls/2.jpg", "sound": "sound.mp3"},
-    {"name": "Наталья Бондарь", "age": "30 лет", "image": "images/girls/3.jpg", "sound": "sound.mp3"},
-    {"name": "Мария Матияш", "age": "22 года", "image": "images/girls/4.jpg", "sound": "sound.mp3"},
-    {"name": "Евгения Ярушникова", "age": "32 года", "image": "images/girls/5.jpg", "sound": "sound.mp3"},
-    {"name": "Екатерина Пильник", "age": "32 года", "image": "images/girls/6.jpg", "sound": "sound.mp3"},
-    {"name": "Полина Кадынская", "age": "24 года", "image": "images/girls/7.jpg", "sound": "sound.mp3"},
-    {"name": "Анастасия Соколова", "age": "21 год", "image": "images/girls/9.jpg", "sound": "sound.mp3"},
-    {"name": "Анастасия Юрчикова", "age": "29 лет", "image": "images/girls/10.jpg", "sound": "sound.mp3"}
+    {"id":1029,"name": "Виктория Цуранова", "age": "26 лет", "image": "images/girls/1.jpg", "sound": "sound.mp3","likes":100},
+    {"id":1028,"name": "Елизавета Бондаренко", "age": "21 год", "image": "images/girls/2.jpg", "sound": "sound.mp3","likes":0},
+    {"id":1027,"name": "Наталья Бондарь", "age": "30 лет", "image": "images/girls/3.jpg", "sound": "sound.mp3","likes":50},
+    {"id":1026,"name": "Мария Матияш", "age": "22 года", "image": "images/girls/4.jpg", "sound": "sound.mp3","likes":20},
+    {"id":1025,"name": "Евгения Ярушникова", "age": "32 года", "image": "images/girls/5.jpg", "sound": "sound.mp3","likes":0},
+    {"id":1024,"name": "Екатерина Пильник", "age": "32 года", "image": "images/girls/6.jpg", "sound": "sound.mp3","likes":1000},
+    {"id":1023,"name": "Полина Кадынская", "age": "24 года", "image": "images/girls/7.jpg", "sound": "sound.mp3","likes":0},
+    {"id":1022,"name": "Анастасия Соколова", "age": "21 год", "image": "images/girls/9.jpg", "sound": "sound.mp3","likes":110},
+    {"id":1021,"name": "Анастасия Юрчикова", "age": "29 лет", "image": "images/girls/10.jpg", "sound": "sound.mp3","likes":577}
   ]
 }
