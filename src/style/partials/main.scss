@@ -410,10 +410,10 @@ body{
 	}
 }
 
-
+$resolution: 2496;
 .section_three{
 	position: relative;
-	padding-top: vw(40);
+	padding-top: vw(40*1.3);
 	background: $yellow;
 	&::before{
 		content: "";
@@ -424,7 +424,7 @@ body{
 		left: 0;
 		top: 0;
 		height: 100%;
-		width: vw(1105);
+		width: vw(1436);
 		pointer-events: none;
 	}
 	.title{
@@ -439,14 +439,15 @@ body{
 	}
 
 	.list{
-		margin-top: vw(20);
-		padding: 0 vw(60);
+		margin-top: vw(20*1.3);
+		padding: 0 vw(60*1.3);
 		ol {
 			list-style: none;
 			padding-left: 0px;
 			counter-reset: item;
 			display: table;
 			text-align: left;
+			margin: 0 auto;
 			>li {
 				display: table-row;
 				counter-increment: item;
@@ -459,7 +460,7 @@ body{
 					font-size: vw(200);
 					font-weight: 400;
 					line-height: 0.8;
-					padding: vw(13) vw(25) vw(13) vw(0);
+					padding: vw(13*1.3) vw(25) vw(13*1.3) vw(0);
 				}
 				>div{
 					display: table-cell;
@@ -468,8 +469,8 @@ body{
 						color: $red;
 						font-size: vw(78);
 						font-weight: 400;
-						padding: vw(28) vw(50) vw(26) vw(30);
-						width: vw(810);
+						padding: vw(28*1.3) vw(50) vw(26*1.3) vw(30);
+						width: vw(810*1.2);
 						box-sizing: border-box;
 						span{
 							padding: vw(15) vw(50) vw(13) vw(0);
@@ -495,9 +496,9 @@ body{
 
 .section_four {
 	position: relative;
-	padding-top: vw(50);
+	padding-top: vw(50*1.3);
 	background: $red;
-	padding-bottom: vw(40);
+	padding-bottom: vw(40*1.3);
 
 	&::before {
 		content: "";
@@ -508,7 +509,7 @@ body{
 		left: 0;
 		top: 0;
 		height: 100%;
-		width: vw(1073);
+		width: vw(1073*1.3);
 		pointer-events: none;
 	}
 
@@ -517,7 +518,7 @@ body{
 		font-size: vw(105);
 		font-weight: 400;
 		line-height: 0.8;
-		margin-left: vw(53);
+		margin-left: vw(383);
 		span{
 			padding: vw(25)  vw(25)  vw(22);
 		}
@@ -527,6 +528,9 @@ body{
 		position: relative;
 		padding-top: vw(512);
 		margin-top: vw(43);
+		width: vw(1780);
+		margin-left: auto;
+		margin-right: auto;
 		.main-img{
 			width: vw(1536);
 			margin: 0 auto;
@@ -697,7 +701,7 @@ body{
 	.text-bottom{
 		display: flex;
 		margin-top: vw(-25);
-		margin-left: vw(115);
+		margin-left: vw(390);
 		p{
 			color: $blue;
 			font-family: $font2;
@@ -713,7 +717,7 @@ body{
 		}
 		.right{
 			width: vw(650);
-			margin-left: vw(60);
+			margin-left: vw(60*1.3);
 		}
 	}
 
@@ -725,8 +729,9 @@ body{
 			font-weight: 400;
 			padding: vw(8) vw(16) vw(8) vw(16);
 			box-sizing: border-box;
-			margin-left: vw(80);
+			margin-left: vw(338);
 			line-height: 1.4;
+			width: vw(1820);
 			span{
 				padding: vw(8) vw(16) vw(8) vw(0);
 				background: $yellow;
@@ -736,7 +741,7 @@ body{
 		}
 		.icons{
 			margin-top: vw(44);
-			margin-left: vw(80);
+			margin-left: vw(338);
 			position: relative;
 			height: vw(535);
 			.cloud {
@@ -851,7 +856,7 @@ body{
 		.flex-block{
 			margin-top: vw(24);
 			display: flex;
-			margin-left: vw(130);
+			margin-left: vw(396);
 			p{
 				color: $blue;
 				font-family: $font2;
@@ -886,7 +891,7 @@ body{
 			font-weight: 400;
 			padding: vw(8) vw(16) vw(8) vw(16);
 			box-sizing: border-box;
-			margin-left: vw(362);
+			margin-left: vw(631);
 			margin-top: vw(20);
 			span{
 				padding: vw(8) vw(16) vw(8) vw(0);
@@ -898,6 +903,7 @@ body{
 	}
 }
 
+$resolution: 1920;
 .section_five{
 	padding: vw(15) vw(17);
 	img{

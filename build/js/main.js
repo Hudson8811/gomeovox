@@ -62,7 +62,7 @@ $(document).ready(function() {
                     likes = data.girls;
                     girlsCount = girls.length;
 
-                    likes.sort(( a, b ) => a.likes - b.likes);
+                    likes.sort(( a, b ) => b.likes - a.likes);
                     var $reit = '';
                     $reit += '<ol>';
                     for (var n = 0; n < likes.length; n++) {
