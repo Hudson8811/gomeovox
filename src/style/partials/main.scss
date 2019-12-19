@@ -144,14 +144,19 @@ body{
 		}
 	}
 	.daa{
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: vw(296);
+		height: vw(208);
 		position: absolute;
-		left: vw(1120);
+		left: vw(1110);
 		top: vw(55);
-		img{
-			width: 100%;
-			display: block;
+		background: url("../images/daa.svg") center center no-repeat;
+		background-size: contain;
+		span{
+			color: $red;
+			font-size: vw(36);
 		}
 	}
 
@@ -484,5 +489,119 @@ body{
 			}
 		}
 
+	}
+}
+
+
+.section_four {
+	position: relative;
+	padding-top: vw(50);
+	background: $red;
+
+	&::before {
+		content: "";
+		background: url("../images/bg4.png") right center no-repeat;
+		background-size: cover;
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: vw(1073);
+		pointer-events: none;
+	}
+
+	.title{
+		color: #ffffff;
+		font-size: vw(105);
+		font-weight: 400;
+		line-height: 0.8;
+		margin-left: vw(53);
+		span{
+			padding: vw(25)  vw(25)  vw(22);
+		}
+	}
+
+	.main-block{
+		position: relative;
+		padding-top: vw(512);
+		margin-top: vw(43);
+		.main-img{
+			width: vw(1536);
+			margin: 0 auto;
+			img{
+				width: 100%;
+				display: block;
+			}
+		}
+		.top-text{
+			position: absolute;
+			top: 0;
+			color: $red;
+			font-size: vw(36);
+			padding: vw(8) vw(15) vw(8) vw(15);
+			span{
+				padding: vw(8) vw(15) vw(8) vw(0);
+				background: $blue;
+				box-shadow: vw(-15) 0 0 $blue;
+				white-space: pre-wrap;
+			}
+			&-1{
+				left: vw(83);
+			}
+			&-2{
+				left: vw(1122);
+			}
+		}
+		.note{
+			position: absolute;
+			img{
+				width: 100%;
+				display: block;
+			}
+			&-1{
+				left: vw(1388);
+				top: vw(420);
+				width: vw(69);
+			}
+			&-2{
+				left: vw(1343);
+				top: vw(290);
+				width: vw(24);
+			}
+			&-3{
+				left: vw(1067);
+				top: vw(640);
+				width: vw(71);
+			}
+			&-4{
+				left: vw(607);
+				top: vw(122);
+				width: vw(57);
+			}
+			&-5{
+				left: vw(577);
+				top: vw(666);
+				width: vw(24);
+			}
+			&-6{
+				left: vw(153);
+				top: vw(1184);
+				width: vw(57);
+			}
+		}
+
+		.cloud{
+			position: absolute;
+			&-text{
+				text-align: center;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: vw(24);
+				font-weight: 400;
+				line-height: vw(27);
+			}
+		}
 	}
 }

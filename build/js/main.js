@@ -51,6 +51,8 @@ $(document).ready(function() {
 
 
     function loadGirls(){
+        // /add_like/
+        // https://missvoice.maximonline.ru/get_girls/
         $.getJSON('test.json', function(data) {
             girls = data.girls;
             girlsCount = girls.length;
