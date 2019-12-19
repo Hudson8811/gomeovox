@@ -168,9 +168,13 @@ $(document).ready(function() {
 
     loadGirls();
 
+    $('.arrow-down').click(function (e) {
+        e.preventDefault();
+        $("html, body").animate({ scrollTop: $('.section_two').offset().top }, 600);
+    });
 });
 
-
+new WOW().init();
 
 function vote(elem) {
     event.preventDefault();

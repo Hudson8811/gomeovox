@@ -92,6 +92,9 @@ body{
 	transition: 1s linear;
 }
 
+.section{
+	overflow: hidden;
+}
 
 .section_one{
 	min-height: 100vh;
@@ -136,7 +139,7 @@ body{
 		display: block;
 		width: vw(232);
 		position: absolute;
-		right: 0;
+		right: vw(25);
 		top: vw(23);
 		img{
 			width: 100%;
@@ -162,6 +165,7 @@ body{
 
 	.right{
 		padding-top: 25vmin;
+		margin-right: vw(25);
 		.title{
 			text-align: right;
 			font-size: vw(105);
@@ -176,7 +180,6 @@ body{
 			margin-top: vw(30);
 			text-align: right;
 			margin-left: auto;
-			margin-right: vw(25);
 		}
 	}
 
@@ -196,6 +199,7 @@ body{
 		animation-direction: alternate;
 		animation-fill-mode: both;
 		animation-play-state: running;
+		cursor: pointer;
 	}
 }
 
@@ -203,6 +207,8 @@ body{
 	0% {transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1); opacity: 1; animation-timing-function: ease-in-out}
 	100% {transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,20,0,1); opacity: 1; }
 }
+
+
 
 .section_two{
 	height: vw(1080);
@@ -898,6 +904,13 @@ $resolution: 2496;
 				background: $blue;
 				box-shadow: vw(-16) 0 0 $blue;
 				white-space: pre-wrap;
+			}
+			a{
+				color: $yellow;
+				text-decoration: none;
+				&:hover{
+					color: $red;
+				}
 			}
 		}
 	}
