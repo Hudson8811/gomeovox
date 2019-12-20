@@ -342,6 +342,7 @@ body{
 		align-items: center;
 		padding-top: 3vh;
 		padding-bottom: 3vh;
+		box-sizing: border-box;
 	}
 
 
@@ -353,11 +354,12 @@ body{
 		margin-top: vw(-300);
 		margin-left: vw(-200*0.7);
 		pointer-events: none;
+		z-index: 10;
 		@include media((
 						width: (md: vw2(235)),
 						left: (md: vw2(-20)),
 						margin-left: (md: 0),
-						margin-top: (md: vw2(-200)),
+						margin-top: (md: vw2(-145)),
 		));
 		.title{
 			color: #ffffff;
@@ -399,8 +401,18 @@ body{
 			justify-content: space-between;
 			width: vw(1604*0.8);
 			margin: 0 auto;
+
+			@include media((
+							width: (md: 100%),
+							flex-direction: (md: column),
+			));
 			.girl-block{
 				width: vw(583*0.8);
+				position: relative;
+				@include media((
+								width: (md: 100%),
+								height: (md: vw2(445)),
+				));
 				.img{
 					display: flex;
 					width: 100%;
@@ -411,6 +423,11 @@ body{
 					overflow: hidden;
 					background: black;
 					box-sizing: border-box;
+					@include media((
+									width: (md: vw2(326)),
+									height: (md: vw2(445)),
+									margin: (md: 0 auto),
+					));
 					.image{
 						width: 100%;
 						height: 100%;
@@ -433,6 +450,9 @@ body{
 						font-size: vw(105*0.8);
 						line-height: 0.8;
 						display: none;
+						@include media((
+										font-size: (md: vw2(59)),
+						));
 					}
 					.like{
 						position: absolute;
@@ -449,6 +469,14 @@ body{
 						display: flex;
 						align-items: center;
 						justify-content: center;
+						@include media((
+										width: (md: vw2(50)),
+										height: (md: vw2(50)),
+										margin-left: (md: 0),
+										left: (md: auto),
+										bottom: (md: vw2(18)),
+										right: (md: vw2(18)),
+						));
 						svg{
 							width: 80%;
 							margin-top: vw(5*0.8);
@@ -462,6 +490,9 @@ body{
 					}
 					&.liked{
 						border: $red vw(10*0.8) solid;
+						@include media((
+										border-width: (md: vw2(8)),
+						));
 					}
 				}
 				.flex-row{
@@ -469,6 +500,12 @@ body{
 					justify-content: space-between;
 					align-items: flex-start;
 					margin-top: vw(23*0.8);
+					@include media((
+									margin-top: (md: 0),
+									position: (md: absolute),
+									left: (md: 0),
+									width: (md: vw2(648)),
+					));
 					audio{
 						display: none;
 					}
@@ -480,6 +517,11 @@ body{
 						width: vw(93*0.8);
 						height: vw(93*0.8);
 						cursor: pointer;
+						flex-shrink: 0;
+						@include media((
+										width: (md: vw2(93)),
+										height: (md: vw2(93)),
+						));
 						&:hover{
 							transform: scale(1.1);
 						}
@@ -492,39 +534,83 @@ body{
 						font-size: vw(36*0.8);
 						max-width: 75%;
 						padding: vw(5*0.8) vw(10*0.8);
+						@include media((
+										font-size: (md: vw2(36)),
+										padding: (md: vw2(5) vw2(10)),
+						));
 						span{
 							background: $blue;
 							white-space:pre-wrap;
 							padding: vw(5*0.8) vw(10*0.8);
 							padding-left:0;
 							box-shadow: vw(-10*0.8) 0 0 $blue;
+							@include media((
+											font-size: (md: vw2(36)),
+											padding: (md: vw2(5) vw2(10)),
+											padding-left: (md:0),
+											box-shadow: (md: vw2(-10) 0 0 $blue),
+							));
 						}
 					}
 					.age{
 						margin-top: vw(10*0.8);
 						margin-left: vw(10*0.8);
 						color: $blue;
+						@include media((
+										display: (md: none)
+						));
+					}
+				}
+				&.left-girl{
+					.flex-row{
+						@include media((
+										top: (md: 0),
+						));
 					}
 				}
 
 				&.right-girl{
+					@include media((
+									margin-top: (md: vw2(42)),
+					));
 					.flex-row{
+						@include media((
+										bottom: (md: 0),
+						));
 						.play{
 							background: url("../images/play_2.png") center center no-repeat;
 							background-size: contain;
+							@include media((
+											background-image: (md:  url("../images/play.png")),
+											position: (md:  relative),
+											top: (md: vw2(-345)),
+							));
 							&.pause{
 								background-image: url("../images/pause_2.png");
+								@include media((
+												background-image: (md:  url("../images/pause.png")),
+								));
 							}
 						}
 						.name{
 							color: $blue;
+							@include media((
+											color: (md: $red),
+							));
 							span{
 								background: $red;
 								box-shadow: vw(-10*0.8) 0 0 $red;
+								@include media((
+												background: (md: $blue),
+												box-shadow: (md: vw2(-10) 0 0 $blue),
+								));
 							}
 						}
 						.age{
 							color: $red;
+							@include media((
+											color: (md: $blue),
+							));
 						}
 					}
 				}
@@ -538,6 +624,9 @@ body{
 			display: block;
 			background: url("../images/arr-r.png") center center no-repeat;
 			background-size: contain;
+			@include media((
+							display: (md: none),
+			));
 			&::after{
 				display: none;
 			}
@@ -548,6 +637,25 @@ body{
 		.swiper-button-prev{
 			transform: scaleX(-1);
 			left: vw(200*0.8);
+		}
+
+		.swiper-pagination{
+			display: none;
+			bottom: 50%;
+			margin-bottom: vw2(-7);
+			@include media((
+							display: (md: block),
+			));
+			.swiper-pagination-bullet{
+				width: vw2(12);
+				height: vw2(12);
+				margin: 0 vw2(2.5);
+				background: #f7d9b7;
+				opacity: 1;
+				&-active{
+					background: $red;
+				}
+			}
 		}
 	}
 }
