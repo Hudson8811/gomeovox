@@ -108,7 +108,7 @@ $(document).ready(function() {
                         $('.slider .swiper-wrapper').append($out);
                     }
 
-                    var mySwiper = new Swiper ('.swiper-container', {
+                    mySwiper = new Swiper ('.swiper-container', {
                         loop: false,
                         navigation: {
                             nextEl: '.swiper-button-next',
@@ -203,6 +203,20 @@ new WOW().init();
 function vote(elem) {
     event.preventDefault();
     var id = $(elem).val();
+    if (typeof refreshIntervalId != 'undefined') clearInterval(refreshIntervalId);
+    $(elem).closest('.girls').find('.girl-block').addClass('unblur');
+
+
+    $(elem).closest('.girls').find('.blur').each(function () {
+        console.log(this);
+        $(this).css('filter', 'blur(0px)')
+            .css('webkitFilter', 'blur(0px)')
+            .css('mozFilter', 'blur(0px)')
+            .css('oFilter', 'blur(0px)')
+            .css('msFilter', 'blur(0px)');
+    });
+
+
     $(elem).closest('.img').addClass('liked');
     $(elem).closest('.girls').find('.likes').show();
     $(elem).closest('.girls').find('.like').hide();
@@ -224,5 +238,9 @@ function vote(elem) {
             }
         }
     });
+
+    setTimeout(function () {
+        mySwiper.slideNext();
+    },5000 );
 
 }
