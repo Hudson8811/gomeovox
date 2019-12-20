@@ -56,7 +56,7 @@ $(document).ready(function() {
     function loadGirls(){
         $.ajax({
             type: "POST",
-            url: "/get_girls/",
+            url: "http://localhost/get_girls/",
             data: '',
             success: function (returndata) {
                 if (returndata.length) {
@@ -209,7 +209,7 @@ function vote(elem) {
 
     $.ajax({
         type: "POST",
-        url: "/add_like/",
+        url: "http://localhost/add_like/",
         data: {id, id},
         success: function(data) {
             var parse = JSON.parse(data);
