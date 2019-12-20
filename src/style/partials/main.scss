@@ -678,6 +678,11 @@ $resolution: 2496;
 		height: 100%;
 		width: vw(1436);
 		pointer-events: none;
+		@include media((
+						background: (md: url("../images/bgm3.png") right center no-repeat),
+						background-size: (md: cover),
+						width: (md: vw2(521)),
+		));
 	}
 
 	.container{
@@ -697,21 +702,37 @@ $resolution: 2496;
 		font-weight: 400;
 		line-height: 0.8;
 		text-align: center;
+		@include media((
+						font-size: (md: vw2(105)),
+						width: (md: 100%),
+						box-sizing: (md: border-box),
+		));
 		span{
 			padding: vw(20)  vw(20)  vw(18);
+			@include media((
+							padding: (md: vw2(20)  vw2(20)  vw2(18)),
+							width: (md: 100%),
+							box-sizing: (md: border-box),
+			));
 		}
 	}
 
 	.list{
 		margin-top: 2vh;
 		padding: 0 vw(60);
+		@include media((
+						padding: (md: 0),
+		));
 		ol {
 			list-style: none;
-			padding-left: 0px;
+			padding-left: 0;
 			counter-reset: item;
 			display: table;
 			text-align: left;
 			margin: 0 auto;
+			@include media((
+							width: (md: 100%),
+			));
 			>li {
 				display: table-row;
 				counter-increment: item;
@@ -725,6 +746,10 @@ $resolution: 2496;
 					font-weight: 400;
 					line-height: 0.8;
 					padding: 1vh vw(25) 1vh vw(0);
+					@include media((
+									font-size: (md: vw2(72)),
+									padding: (md: 1vh vw2(15) 1vh 0),
+					));
 				}
 				>div{
 					display: table-cell;
@@ -736,11 +761,20 @@ $resolution: 2496;
 						padding: vw(15) vw(40) vw(15) vw(25);
 						width: vw(1000);
 						box-sizing: border-box;
+						@include media((
+										font-size: (md: vw2(42)),
+										padding: (md: vw2(20) vw2(30) vw2(20) vw2(15)),
+										width: (md: auto),
+						));
 						span{
 							padding: vw(10) vw(40) vw(10) vw(0);
 							background: $blue;
 							box-shadow: vw(-25) 0 0 $blue;
 							white-space: pre-wrap;
+							@include media((
+											box-shadow: (md: vw2(-15) 0 0 $blue),
+											padding: (md: vw2(8) vw2(15) vw2(8) vw2(0)),
+							));
 						}
 					}
 					&.score{
@@ -749,6 +783,9 @@ $resolution: 2496;
 						font-weight: 400;
 						line-height: 0.8;
 						padding: 1vh vw(0) 1vh vw(0);
+						@include media((
+										font-size: (md:  vw2(60)),
+						));
 					}
 				}
 			}
