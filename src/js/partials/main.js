@@ -187,7 +187,6 @@ function vote(elem) {
 
 
     $(elem).closest('.girls').find('.blur').each(function () {
-        console.log(this);
         $(this).css('filter', 'blur(0px)')
             .css('webkitFilter', 'blur(0px)')
             .css('mozFilter', 'blur(0px)')
@@ -203,7 +202,8 @@ function vote(elem) {
     $.ajax({
         type: "POST",
         url: "/add_like/",
-        data: {id, id},
+        data: {"id": id},
+        dataType: 'json',
         success: function(data) {
             var parse = JSON.parse(data);
             var result = parse.result;
