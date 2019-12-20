@@ -1,7 +1,7 @@
 $font1: "Rubik Mono One", sans-serif;
 $font2: 'Montserrat';
 $resolution: 1920;
-$resolution2: 320;
+$resolution2: 768;
 $blue: #24186a;
 $yellow: #fdb315;
 $red: #f04132;
@@ -29,9 +29,16 @@ body{
 	width: vw(1880);
 	margin: 0 auto;
 	position: relative;
+	@include media((
+					width: (md: vw2(728)),
+	));
 }
 
 .social-block{
+	@include media((
+					display: (md: flex),
+					justify-content: (md: center),
+	));
 	.soc-link{
 		border: none;
 		background: $red;
@@ -41,10 +48,19 @@ body{
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@include media((
+						width: (md: vw2(50)),
+						height: (md: vw2(50)),
+						background: (md: $blue),
+		));
 		svg{
 			width: vw(20);
 			height: vw(20);
 			object-fit: contain;
+			@include media((
+							width: (md: vw2(20)),
+							height: (md: vw2(20)),
+			));
 			*{
 				fill: white;
 			}
@@ -54,6 +70,10 @@ body{
 		}
 		+.soc-link{
 			margin-top: vw(10);
+			@include media((
+							margin-top: (md: 0),
+							margin-left: (md: vw2(10)),
+			));
 		}
 	}
 }
@@ -80,9 +100,17 @@ body{
 	font-size: vw(24);
 	font-weight: 500;
 	line-height: vw(27);
+
+	@include media((
+					font-size: (md: vw2(24)),
+					line-height: (md: vw2(27)),
+	));
 	p{
 		+p{
 			margin-top: vw(25);
+			@include media((
+							margin-top: (md: vw2(25)),
+			));
 		}
 	}
 }
@@ -102,6 +130,10 @@ body{
 	background: url("../images/bg-top.jpg") left center no-repeat;
 	background-size: cover;
 	position: relative;
+	@include media((
+					background: (md: url("../images/bg-top_mobile.jpg") left top no-repeat),
+					background-size: (md: 100% auto),
+	));
 	&::before{
 		content: "";
 		background: url("../images/bg.png") left center no-repeat;
@@ -113,10 +145,21 @@ body{
 		height: 100%;
 		width: vw(916);
 		pointer-events: none;
+
+		@include media((
+						height: (md: calc(100% - #{vw2(308)})),
+						width: (md: 100%),
+						top: (md: auto),
+						bottom: (md: 0),
+						background: (md: url("../images/bgm1.png") center top no-repeat),
+						background-size: (md: cover),
+		));
 	}
 	.container{
 		min-height: 100vh;
 		height: max-content;
+		@include media((
+		));
 	}
 	.logo{
 		display: block;
@@ -124,6 +167,11 @@ body{
 		top: vw(37);
 		left: vw(25);
 		width: vw(337);
+		@include media((
+						top: (md: vw2(37)),
+						left: (md: vw2(25)),
+						width: (md: vw2(337)),
+		));
 		img{
 			width: 100%;
 			display: block;
@@ -133,6 +181,10 @@ body{
 		position: absolute;
 		left: vw(25);
 		bottom: vw(38);
+		@include media((
+						position: (md: static),
+						margin-top: (md: 5vh),
+		));
 	}
 
 	.maxim{
@@ -141,9 +193,27 @@ body{
 		position: absolute;
 		right: vw(25);
 		top: vw(23);
+
+		@include media((
+						top: (md: vw2(23)),
+						right: (md: 0),
+						width: (md: vw2(232)),
+		));
 		img{
 			width: 100%;
 			display: block;
+			&.desktop{
+				display: block;
+				@include media((
+								display: (md:none),
+				));
+			}
+			&.mobile{
+				display: none;
+				@include media((
+								display: (md:block),
+				));
+			}
 		}
 	}
 	.daa{
@@ -157,22 +227,41 @@ body{
 		top: vw(55);
 		background: url("../images/daa.svg") center center no-repeat;
 		background-size: contain;
+		@include media((
+						width: (md: vw2(195)),
+						height: (md: vw2(137)),
+						left: (md: vw2(519)),
+						top: (md: vw2(113)),
+		));
 		span{
 			color: $red;
 			font-size: vw(36);
+			@include media((
+							font-size: (md: vw2(24)),
+			));
 		}
 	}
 
 	.right{
 		padding-top: 25vmin;
 		margin-right: vw(25);
+		@include media((
+						padding-top: (md: 30vh),
+						margin: (md: 0 vw2(5)),
+		));
 		.title{
 			text-align: right;
 			font-size: vw(105);
 			font-weight: 400;
 			line-height: 0.8;
+			@include media((
+							font-size: (md: vw2(80)),
+			));
 			span{
 				padding: vw(25)  vw(25)  vw(22);
+				@include media((
+								padding: (md: vw2(17)  vw2(17)  vw2(15)),
+				));
 			}
 		}
 		.text{
@@ -180,6 +269,10 @@ body{
 			margin-top: vw(30);
 			text-align: right;
 			margin-left: auto;
+			@include media((
+							width: (md: 95%),
+							margin-top: (md: 5vh),
+			));
 		}
 	}
 
@@ -192,7 +285,7 @@ body{
 		position: absolute;
 		bottom: vw(50);
 		left: 50%;
-		margin-left: vw(-43);
+		margin-left: vw(-34);
 		animation-name: arrow;
 		animation-duration: 0.5s;
 		animation-iteration-count: infinite;
@@ -200,6 +293,14 @@ body{
 		animation-fill-mode: both;
 		animation-play-state: running;
 		cursor: pointer;
+		@include media((
+						width: (md: vw2(32)),
+						margin-left: (md: auto),
+						margin-right: (md: auto),
+						margin-top: (md: 2vh),
+						height: (md: vw2(25)),
+						position: (md: static),
+		));
 	}
 }
 
@@ -226,6 +327,12 @@ body{
 		height: 100%;
 		width: vw(1111);
 		pointer-events: none;
+
+		@include media((
+						width: (md: vw2(515)),
+						background: (md: url("../images/bgm2.png") right top no-repeat),
+						background-size: (md: cover),
+		));
 	}
 	.container{
 		position: relative;
@@ -246,11 +353,20 @@ body{
 		margin-top: vw(-300);
 		margin-left: vw(-200*0.7);
 		pointer-events: none;
+		@include media((
+						width: (md: vw2(235)),
+						left: (md: vw2(-20)),
+						margin-left: (md: 0),
+						margin-top: (md: vw2(-200)),
+		));
 		.title{
 			color: #ffffff;
 			font-size: vw(105*0.7);
 			font-weight: 400;
 			text-align: center;
+			@include media((
+							font-size: (md: vw2(72)),
+			));
 			span{
 				box-sizing: border-box;
 				width: 100%;
@@ -263,6 +379,13 @@ body{
 			font-weight: 500;
 			text-align: center;
 			margin-top: vw(240*0.7);
+
+			@include media((
+							font-size: (md: vw2(26)),
+							margin-top: (md: vw2(13)),
+							text-align: (md: left),
+							margin-left: (md: vw2(20)),
+			));
 		}
 	}
 
