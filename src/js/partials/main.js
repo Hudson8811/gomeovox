@@ -32,7 +32,7 @@ $(document).ready(function() {
     function loadGirls(){
         $.ajax({
             type: "POST",
-            url: "http://localhost/get_girls/",
+            url: "/get_girls/",
             data: '',
             success: function (returndata) {
                 if (returndata.length) {
@@ -202,7 +202,7 @@ function vote(elem) {
 
     $.ajax({
         type: "POST",
-        url: "http://localhost/add_like/",
+        url: "/add_like/",
         data: {id, id},
         success: function(data) {
             var parse = JSON.parse(data);
