@@ -28,6 +28,12 @@ $(document).ready(function() {
         return false;
     }
 
+    function randomInteger(min, max) {
+        let rand = min - 0.5 + Math.random() * (max - min + 1);
+        return Math.round(rand);
+    }
+
+
 
     function loadGirls(){
         $.ajax({
@@ -51,7 +57,12 @@ $(document).ready(function() {
                     $('.section_three .list').html($reit);
 
                     shuffle(girls);
-                    if( girlsCount%2 ) girls.pop();
+
+
+                    if( girlsCount%2 ) {
+                        var rand = randomInteger(0, girlsCount-2);
+                        girls.push(girls[rand]);
+                    }
 
 
                     for (var i = 0; i < girls.length-1; i++) {
